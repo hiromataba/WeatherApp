@@ -1,3 +1,3 @@
 # WeatherApp
 
-[Live Demo]('https://hiromataba.github.io/WeatherApp/dist/')
+[Live Demo]('https://hiromataba.github.io/WeatherApp/dist')
