@@ -29,6 +29,8 @@ let weather = {
       '.weather-wind'
     ).innerHTML = `Wind speed: ${speed}Km/h`;
     document.querySelector('.weather').classList.remove('loading');
+    document.body.style.backgroundImage =
+      "url('https://source.unsplash.com/1600x900/?" + name + "')";
   },
 
   search: () => {
@@ -38,13 +40,15 @@ let weather = {
 
 const searchBtn = document.querySelector('.submit');
 searchBtn.addEventListener('click', () => {
+  document.querySelector('#search').value = '';
   weather.search();
 });
 
-weather.fetchWeather('Goma')
+weather.fetchWeather('Goma');
 
 document.querySelector('#search').addEventListener('keyup', (event) => {
   if (event.key === 'Enter') {
     weather.search();
+    document.querySelector('#search').value = '';
   }
 });
