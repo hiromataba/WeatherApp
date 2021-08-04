@@ -28,6 +28,7 @@ let weather = {
     document.querySelector(
       '.weather-wind'
     ).innerHTML = `Wind speed: ${speed}Km/h`;
+    document.querySelector('.weather').classList.remove('loading');
   },
 
   search: () => {
@@ -37,8 +38,13 @@ let weather = {
 
 const searchBtn = document.querySelector('.submit');
 searchBtn.addEventListener('click', () => {
-  console.log('Clicked');
   weather.search();
 });
 
-document.querySelector()
+weather.fetchWeather('Goma')
+
+document.querySelector('#search').addEventListener('keyup', (event) => {
+  if (event.key === 'Enter') {
+    weather.search();
+  }
+});
