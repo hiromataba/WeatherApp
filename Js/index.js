@@ -40,8 +40,8 @@ let weather = {
 
 const searchBtn = document.querySelector('.submit');
 searchBtn.addEventListener('click', () => {
-  document.querySelector('#search').value = '';
   weather.search();
+  document.querySelector('#search').value = '';
 });
 
 weather.fetchWeather('Goma');
