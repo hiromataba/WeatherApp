@@ -16,13 +16,29 @@ let weather = {
     const { temp, humidity } = data.main;
     const { speed } = data.wind;
     console.log(name, icon, description, temp, humidity, speed);
-    document.querySelector('.city').innerHTML = `Weather in ${name}`
-    document.querySelector('.weather-icon').src = `https://openweathermap.org/img/wn/${icon}.png`
+    document.querySelector('.city').innerHTML = `Weather in ${name}`;
+    document.querySelector(
+      '.weather-icon'
+    ).src = `https://openweathermap.org/img/wn/${icon}.png`;
     document.querySelector('.weather-desc').innerHTML = description;
-    document.querySelector(".weather-humidity").innerHTML = `Humidity: ${humidity}%`
-    document.querySelector('.temp').innerHTML = `${temp} °C`
-    document.querySelector('.weather-wind').innerHTML = `Wind speed: ${speed}Km/h`
+    document.querySelector(
+      '.weather-humidity'
+    ).innerHTML = `Humidity: ${humidity}%`;
+    document.querySelector('.temp').innerHTML = `${temp} °C`;
+    document.querySelector(
+      '.weather-wind'
+    ).innerHTML = `Wind speed: ${speed}Km/h`;
+  },
+
+  search: () => {
+    weather.fetchWeather(document.querySelector('#search').value);
   },
 };
 
-console.log(weather.fetchWeather('canada'));
+const searchBtn = document.querySelector('.submit');
+searchBtn.addEventListener('click', () => {
+  console.log('Clicked');
+  weather.search();
+});
+
+document.querySelector()

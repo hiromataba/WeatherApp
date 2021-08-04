@@ -1,32 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weather App</title>
-  <link rel="stylesheet" href="./Css/style.css">
-  <link
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./Css/style.css" />
+    <link
       rel="stylesheet"
       href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
     />
-</head>
-<body>
-  <div class="card">
-    <div class="search">
-      <input type="search" name="search" id="search" autocomplete="off" placeholder="Search">
-      <button type="submit" class="submit"><i class="uil uil-search"></i></button>
+  </head>
+  <body>
+    <div class="card">
+      <div class="search">
+        <input
+          type="search"
+          name="search"
+          id="search"
+          autocomplete="off"
+          placeholder="Search"
+        />
+        <button type="submit" class="submit">
+          <i class="uil uil-search"></i>
+        </button>
+      </div>
+      <div class="weather">
+        <h2 class="city">Weather in Goma</h2>
+        <h1 class="temp">75°C</h1>
+        <div class="flex">
+          <img src="" alt="" class="weather-icon" />
+          <div class="weather-desc">Cloudy</div>
+        </div>
+        <div class="weather-humidity">Humidity: 60%</div>
+        <div class="weather-wind">Wind speed: 6.6Km/h</div>
+      </div>
     </div>
-    <div class="weather">
-      <h2 class="city">Weather in Goma</h2>
-      <h1 class="temp">75°C</h1>
-      <img src="" alt="" class="weather-icon">
-      <div class="weather-desc">Cloudy</div>
-      <div class="weather-humidity">Humidity: 60%</div>
-      <div class="weather-wind">Wind speed: 6.6Km/h</div>
-    </div>
-  </div>
 
-  <script src="./Js/index.js"></script>
-</body>
+    <script src="./Js/index.js" defer></script>
+  </body>
 </html>

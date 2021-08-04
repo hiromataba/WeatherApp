@@ -63,5 +63,20 @@ input#search {
 
 .temp {
   margin: 0;
+  margin-bottom: 0.5em;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.weather-icon {
+
+}
+
+.weather-desc {
+  text-transform: capitalize;
+  margin-left: 8px;
 }
 
